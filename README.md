@@ -10,9 +10,9 @@
 
 #####单元测试分类
 
- - 性能测试：测试代码执行花费的时间
- - 逻辑测试：测试代码执行结果是否符合预期
- - 异步测试：测试多线程操作代码
+ - 性能测试：测试代码执行花费的时间。
+ - 逻辑测试：测试代码执行结果是否符合预期。
+ - 异步测试：测试多线程操作代码。
 
 #####测试相关方法
 
@@ -68,14 +68,25 @@
 #### 测试常用宏
 
 ```
-XCTAssertNotNil(a1, format…) 当a1不为nil时成立
-XCTAssert(expression, format...) 当expression结果为YES成立
+XCTAssertNotNil(a1, format…) 当a1不为nil时成立；
+XCTAssert(expression, format...) 当expression结果为YES成立；
 XCTAssertTrue(expression, format...) 当expression结果为YES成立；
-XCTAssertEqualObjects(a1, a2, format...) 判断相等，当[a1 isEqualTo: a2]返回YES的时候成立
-XCTAssertEqual(a1, a2, format...) 当a1==a2返回YES时成立
-XCTAssertNotEqual(a1, a2, format...) 当a1!=a2返回YES时成立
+XCTAssertEqualObjects(a1, a2, format...) 判断相等，当[a1 isEqualTo: a2]返回YES的时候成立；
+XCTAssertEqual(a1, a2, format...) 当a1==a2返回YES时成立；
+XCTAssertNotEqual(a1, a2, format...) 当a1!=a2返回YES时成立；
+XCTAssertEqualWithAccuracy(a1, a2, accuracy, format...)判断相等，（double或float类型）提供一个误差范围，当在误差范围（+/-accuracy）以内相等时通过测试；
+XCTAssertNotEqualWithAccuracy(a1, a2, accuracy, format...) 判断不等，（double或float类型）提供一个误差范围，当在误差范围以内不等时通过测试；
+XCTAssertThrows(expression, format...)异常测试，当expression发生异常时通过；反之不通过；（很变态） XCTAssertThrowsSpecific(expression, specificException, format...) 异常测试，当expression发生specificException异常时通过；反之发生其他异常或不发生异常均不通过；
+XCTAssertThrowsSpecificNamed(expression, specificException, exception_name, format...)异常测试，当expression发生具体异常、具体异常名称的异常时通过测试，反之不通过；
+XCTAssertNoThrow(expression, format…)异常测试，当expression没有发生异常时通过测试；
+XCTAssertNoThrowSpecific(expression, specificException, format...)异常测试，当expression没有发生具体异常、具体异常名称的异常时通过测试，反之不通过；
+XCTAssertNoThrowSpecificNamed(expression, specificException, exception_name, format...)异常测试，当expression没有发生具体异常、具体异常名称的异常时通过测试，反之不通过；
 
 ```
+
+####总结
+- 最开始笔者一度认为单元测试是个比较考验技术的东西，但恰恰相反的，单元测试的使用与概念是相当简单的一个东西，难点在于不知道怎么用，这就需要我们持续的使用练习才能更好的服务于我们的开发。此外，常用的第三方框架例如YYModel、AFNetworking、Alamofire等等优秀框架中也有对框架自身编写的单元测试，学习仿写这些单元测试也是快速提升自己的一种手段。
+- 很多时候，我们的项目中难免发生多个类之间的交互处理，而这种操作非常的不好调试。单元测试的原则之一就在于我们用来测试的代码要求功能很单一，这其实与良好的代码设计的思想是非常相符的。一方面来说，良好的代码结构设计可以让我们的测试用例的构建更加快速简单；反过来单元测试逼着我们去想办法减少类之间的耦合以此来减少甚至排除测试的干扰。无论如何，如果你想成为更好的开发者，单元测试是我们快速提升代码认知的重要手段之一。
 
 ####相关参考资料
 

@@ -55,8 +55,15 @@
 }
 
 - (void)testPerformanceExample {
+    
     [self measureBlock:^{
+//        for (int i = 0; i < 1000; i++) {
+//            NSLog(@":::%@",@(i));
+//        }
+        
     }];
 }
+
+
 
 @end
