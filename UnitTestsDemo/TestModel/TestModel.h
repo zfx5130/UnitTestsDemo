@@ -24,4 +24,6 @@
 
 - (instancetype)initWithDictonary:(NSDictionary *)dic;
 
+- (NSDictionary *)modelToDictonary;
+
 @end
