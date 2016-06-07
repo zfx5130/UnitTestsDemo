@@ -15,6 +15,7 @@
 		D706E7A41D06B75B009AFF06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D706E7A21D06B75B009AFF06 /* LaunchScreen.storyboard */; };
 		D706E7AF1D06B75B009AFF06 /* UnitTestsDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D706E7AE1D06B75B009AFF06 /* UnitTestsDemoTests.m */; };
 		D706E7BA1D06B75B009AFF06 /* UnitTestsDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D706E7B91D06B75B009AFF06 /* UnitTestsDemoUITests.m */; };
+		D706E7CD1D06CBC0009AFF06 /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D706E7CC1D06CBC0009AFF06 /* TestModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		D706E7B51D06B75B009AFF06 /* UnitTestsDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTestsDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D706E7B91D06B75B009AFF06 /* UnitTestsDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnitTestsDemoUITests.m; sourceTree = "<group>"; };
 		D706E7BB1D06B75B009AFF06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D706E7CB1D06CBC0009AFF06 /* TestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestModel.h; sourceTree = "<group>"; };
+		D706E7CC1D06CBC0009AFF06 /* TestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,7 @@
 				D706E7A01D06B75B009AFF06 /* Assets.xcassets */,
 				D706E7A21D06B75B009AFF06 /* LaunchScreen.storyboard */,
 				D706E7A51D06B75B009AFF06 /* Info.plist */,
+				D706E7C71D06CB6C009AFF06 /* TestModel */,
 				D706E7941D06B75B009AFF06 /* Supporting Files */,
 			);
 			path = UnitTestsDemo;
@@ -138,6 +142,16 @@
 				D706E7BB1D06B75B009AFF06 /* Info.plist */,
 			);
 			path = UnitTestsDemoUITests;
+			sourceTree = "<group>";
+		};
+		D706E7C71D06CB6C009AFF06 /* TestModel */ = {
+			isa = PBXGroup;
+			children = (
+				D706E7CB1D06CBC0009AFF06 /* TestModel.h */,
+				D706E7CC1D06CBC0009AFF06 /* TestModel.m */,
+			);
+			name = TestModel;
+			path = ../TestModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +287,7 @@
 				D706E79C1D06B75B009AFF06 /* ViewController.m in Sources */,
 				D706E7991D06B75B009AFF06 /* AppDelegate.m in Sources */,
 				D706E7961D06B75B009AFF06 /* main.m in Sources */,
+				D706E7CD1D06CBC0009AFF06 /* TestModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +513,7 @@
 				D706E7C01D06B75B009AFF06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D706E7C11D06B75B009AFF06 /* Build configuration list for PBXNativeTarget "UnitTestsDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +522,7 @@
 				D706E7C31D06B75B009AFF06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D706E7C41D06B75B009AFF06 /* Build configuration list for PBXNativeTarget "UnitTestsDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +531,7 @@
 				D706E7C61D06B75B009AFF06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
